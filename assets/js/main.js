@@ -1,10 +1,3 @@
-/**
-* Template Name: Gp
-* Updated: May 18 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -239,7 +232,7 @@
   });
 
   /**
-   * Portfolio details slider
+   * Productos slider
    */
   new Swiper('.portfolio-details-slider', {
     speed: 400,
