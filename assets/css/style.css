@@ -142,11 +142,11 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 200px;
 }
 .img-fluid-logo{
-
-  width: 180px !important;
+  width: 250px !important;
+  height: 100px !important;
 }
 /*--------------------------------------------------------------
 #  Get Startet Button
