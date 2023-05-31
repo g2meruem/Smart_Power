@@ -28,6 +28,38 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
+  <script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    // Obtener todos los elementos de productos
+    const products = document.querySelectorAll('.portfolio-item');
+
+    // Filtrar los elementos al cargar la página
+    filterItems('.filter-app');
+
+    // Función para filtrar los elementos según la clase seleccionada
+    function filterItems(filterClass) {
+      products.forEach((product) => {
+        if (filterClass === '*' || product.classList.contains(filterClass.replace('.', ''))) {
+          product.style.display = 'block'; // Mostrar solo los elementos filtrados
+        } else {
+          product.style.display = 'none'; // Ocultar los elementos no filtrados
+        }
+      });
+    }
+
+    // Manejar el evento click en los elementos de filtro
+    const filterItemsList = document.querySelectorAll('#portfolio-flters li');
+    filterItemsList.forEach((filterItem) => {
+      filterItem.addEventListener('click', (event) => {
+        const filterClass = event.target.getAttribute('data-filter');
+        filterItems(filterClass);
+      });
+    });
+  });
+</script>
+
+    
 </head>
 
 <body>
@@ -265,7 +297,7 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
-
+        
         <div class="section-title">
           <h2>Productos</h2>
           <p>Productos de nuestros proveedores</p>
@@ -274,8 +306,8 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*"class="filter-active">Todos</li>
-              <li data-filter=".filter-app">Generadores</li>
+              <li data-filter="*">Todos</li>
+              <li data-filter=".filter-app" class="filter-active">Generadores</li>
               <li data-filter=".filter-card">Medidores</li>
               <li data-filter=".filter-web">Sensores de nivel de combustible</li>
               <li data-filter=".filter-lector">Lectores</li>
