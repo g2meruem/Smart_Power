@@ -116,12 +116,10 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
+  background-color: rgba(128, 128, 128, 0.9); /* Cambia el valor de opacidad según tu preferencia */
 }
 
-#header.header-scrolled,
-#header.header-inner-pages {
-  background: rgba(0, 0, 0, 0.8);
-}
+
 
 #header .logo {
   font-size: 32px;
